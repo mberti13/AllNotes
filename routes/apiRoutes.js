@@ -4,6 +4,7 @@ const { title } = require('process');
 
 const router = express.Router();
 
+// ! Remember this function for other uses/projects
 const readFile = () =>{
     let notes = JSON.parse(fs.readFileSync('db/db.json'));
     return notes;
@@ -13,6 +14,12 @@ router.get('/notes', (req, res) =>{
     const notes = readFile();
     // console.log(notes);
     res.json(notes);
+});
+
+router.get('/notes/:id', (req, res) =>{
+    const notes = readFile();
+    const retrieveNote = notes.filter(note => note.id === req.params.id);
+    return retrieveNote;
 });
 
 router.post('/notes', (req, res) =>{
