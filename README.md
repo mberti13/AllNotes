@@ -3,6 +3,8 @@
 ## Description
 AllNotes is a note-taking web application that stores and retrieves the user's notes from a backend server. This project was built using JavaScript, Node.js and Express.js.
 
+[Link to deployed application](https://aqueous-sands-94907.herokuapp.com/)
+
 ## Table of Contents
 1. [Installation](#Installation)
 2. [Usage](#Usage)
